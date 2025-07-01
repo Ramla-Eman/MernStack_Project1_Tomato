@@ -20,7 +20,7 @@ const lists = [
   },
 ];
 
-const Navbar = () => {
+const Navbar = ({setShowLogin}) => {
   const [menu, setMenu] = useState("home");
   return (
     <div className="max-w-7xl mx-auto px-5 flex justify-between items-center py-5">
@@ -44,7 +44,9 @@ const Navbar = () => {
           <img src={assets.basket_icon} alt="" className="md:w-auto w-[20px]"/>
           <div className="absolute min-w-2.5 min-h-2.5 bg-tomato rounded-[5px] -top-2 -right-2"></div>
         </div>
-        <button className="text-color2 md:text-[16px] text-[12px] hover:bg-[#fff4f2] md:px-[30px] px-4 md:py-2.5 py-1 rounded-full border border-tomato transition-all duration-300 cursor-pointer">
+        <button className="text-color2 md:text-[16px] text-[12px] hover:bg-[#fff4f2] md:px-[30px] px-4 md:py-2.5 py-1 rounded-full border border-tomato transition-all duration-300 cursor-pointer"
+        onClick={()=>setShowLogin(true)}
+        >
           signin
         </button>
       </div>
