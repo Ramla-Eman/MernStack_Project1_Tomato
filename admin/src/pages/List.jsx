@@ -2,8 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
-const List = () => {
-  const url = "http://localhost:4500";
+const List = ({url}) => {
   const [list, setList] = useState([]);
 
   const fetchList = async () => {
