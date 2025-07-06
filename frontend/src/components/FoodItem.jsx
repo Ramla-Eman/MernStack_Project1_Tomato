@@ -2,12 +2,12 @@ import React, { useContext } from "react";
 import { assets } from "../assets/assets";
 import { StoreContext } from "../context/StoreContext";
 
-const FoodItem = ({ id, name, image, price, description }) => {
-  const {cartItems, addToCart, removeFromCart} = useContext(StoreContext);
+const FoodItem = ({ id, name, image, price, discription }) => {
+  const {cartItems, addToCart, removeFromCart,url} = useContext(StoreContext);
   return (
     <div className="w-full m-auto rounded-2xl shadow transition-all duration-300 animate-fade-in">
       <div className="relative">
-        <img src={image} alt="" className="rounded-t-2xl w-full" />
+        <img src={url+'/images/'+image} alt="" className="rounded-t-2xl w-full" />
         {!cartItems[id] ? (
           <img
             alt=""
@@ -38,7 +38,7 @@ const FoodItem = ({ id, name, image, price, description }) => {
           <p className="text-[20px] font-medium">{name}</p>
           <img src={assets.rating_starts} alt="" className="w-[70px]" />
         </div>
-        <p className="text-[#676767] text-[12px]">{description}</p>
+        <p className="text-[#676767] text-[12px]">{discription}</p>
         <p className="text-tomato text-[22px] font-medium my-2.5">$ {price}</p>
       </div>
     </div>
