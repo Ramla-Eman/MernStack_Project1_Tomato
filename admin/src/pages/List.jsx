@@ -44,7 +44,7 @@ const List = ({url}) => {
             className="grid sm:grid-cols-[0.5fr_2fr_1fr_1fr_0.5fr] grid-cols-[1fr_3fr_1fr] items-center gap-2.5 py-3 px-[15px] border border-[#cacaca] font-[13px]"
           >
             <img
-              src={`${url}/images/${item.image}`}
+              src={item.image}
               alt=""
               className="w-[50px]"
             />

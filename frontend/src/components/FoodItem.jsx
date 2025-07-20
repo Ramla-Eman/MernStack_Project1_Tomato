@@ -7,7 +7,7 @@ const FoodItem = ({ id, name, image, price, discription }) => {
   return (
     <div className="w-full m-auto rounded-2xl shadow transition-all duration-300 animate-fade-in">
       <div className="relative">
-        <img src={url+'/images/'+image} alt="" className="rounded-t-2xl w-full" />
+        <img src={image} alt="" className="rounded-t-2xl w-full" />
         {!cartItems[id] ? (
           <img
             alt=""
